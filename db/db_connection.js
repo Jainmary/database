@@ -4,12 +4,14 @@ let connection = {
 host : "localhost",
 user : "root",
 password : "jain410",
-database : "readyassist",
+database : "readyassist"
 };
 
-let con = mysql.createconnection(connection);
-let sql = "select * from candidates;"
-con.query(sql, function(err, data, fields){
+let con = mysql.createConnection(connection);
+let sql = "select * from employees;"
+
+con.query(sql, function(err, data, fields)
+{
 if(err) throw err;
 console.log('running fine', data);
 });
