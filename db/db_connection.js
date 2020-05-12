@@ -1,0 +1,17 @@
+let mysql = require('mysql');
+
+let connection = {
+host : "localhost",
+user : "root",
+password : "jain410",
+database : "readyassist",
+};
+
+let con = mysql.createconnection(connection);
+let sql = "select * from candidates;"
+con.query(sql, function(err, data, fields){
+if(err) throw err;
+console.log('running fine', data);
+});
+
+con.end();
