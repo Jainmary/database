@@ -8,7 +8,7 @@ database : "readyassist"
 };
 
 let con = mysql.createConnection(connection);
-let sql = "select * from employees;"
+let sql = "select * from candidates;"
 
 con.query(sql, function(err, data, fields)
 {
